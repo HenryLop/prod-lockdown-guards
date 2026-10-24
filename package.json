@@ -1,0 +1,11 @@
+{
+  "name": "prod-lockdown-guards",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node demo.mjs",
+    "test": "node --test test/lockdown.test.mjs"
+  },
+  "license": "MIT"
+}
