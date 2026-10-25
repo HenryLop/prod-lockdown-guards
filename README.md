@@ -32,6 +32,21 @@ Hook wiring (`settings.json`):
 
 Limit: this guards what the agent runs through the hook. It does not replace org-level permissions.
 
+## Results
+
+Measured from the author's own use, numbers only, no commands or org names. These are hook traces from 23 to 25 Oct 2026. The author's guard is broader than this repo: it also covers sends and its own configuration.
+
+- The guard checked 4,509 tool calls and denied 11.
+
+| Denied | Count |
+| :--- | ---: |
+| Production Salesforce writes | 2 |
+| Commands naming an org alias not on the known list | 2 |
+| Attempts to modify guard, hook or settings files | 4 |
+| Send actions (1 email, 2 send-button clicks) | 3 |
+
+- Not measured: reads that passed. The traces do not record whether a call was a read, so no read count is claimed.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
